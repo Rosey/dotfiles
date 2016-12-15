@@ -1,0 +1,11 @@
+alias git="hub"
+alias g="git"
+alias gco="git checkout"
+alias flow="bundle exec foreman start -f Procfile.dev -p 9393"
+alias delete-merged='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
+alias delete-current-merged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias wysiwyg-compile='cd ~/MetaLab/wysihtml5; rm -r build; broccoli build build; cp build/wysihtml5.js ~/MetaLab/flow_web/vendor/javascripts/web/wysihtml5.js'
+alias br-by-date='git for-each-ref --sort=committerdate refs/heads/ --format="%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))"'
+alias format-json='pbpaste | json_pp | pbcopy'
+alias clear-electron-cache='rm -rf ~/Library/Application\ Support/Electron/'
+alias copy-current-branch="git rev-parse --abbrev-ref HEAD | tr -d '\n' | pbcopy"
