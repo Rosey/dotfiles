@@ -6,6 +6,15 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# Quick access to all my nerdy projects. Can be used like
+# $ work
+# to simply navigate to work directory
+# or
+# $ work web
+# to navigate to the web directory in `work`
+work () { cd ~/Projects/work/$@ fixed args; }
+personal () { cd ~/Projects/personal/$@ fixed args; }
+
 # Git aliases
 alias git="hub"
 alias g="git"
