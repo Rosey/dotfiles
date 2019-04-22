@@ -24,6 +24,8 @@
 	df = diff
 	st = status
 	prune-locals = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
+	du = "diff @{upstream}"
+	rc = "rebase --continue"
 
 [filter "lfs"]
 	clean = git-lfs clean %f
